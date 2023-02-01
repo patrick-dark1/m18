@@ -14,12 +14,12 @@ class CryptoConverter:
         try:
             quote_ticker = keys[quote]
         except KeyError:
-            raise ConvertionException(f'Не удалось обработать валюту {quote}')
+            raise ConvertionException(f'Не удалось обработать валюту {quote}, напишите валюту с маленькой буквы')
 
         try:
             base_ticker = keys[base]
         except KeyError:
-            raise ConvertionException(f'Не удалось обработать валюту {base}')
+            raise ConvertionException(f'Не удалось обработать валюту {base}, напишите валюту с маленькой буквы')
 
         try:
             amount = float(amount)
