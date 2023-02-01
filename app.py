@@ -8,7 +8,8 @@ bot = telebot.TeleBot(TOKEN)
 def help(message: telebot.types.Message):
     text = 'Чтобы начать работу введите команду боту в формате:\n <имя валюты> ' \
            '<в какую валюту перевести> <количество переводимой валюты> \n' \
-            'Увидеть все доступные валюты /values'
+            'Увидеть все доступные валюты /values \n' \
+            'Пример: биткоин доллар 15'
     bot.reply_to(message, text)
 
 @bot.message_handler(commands=['values'])
